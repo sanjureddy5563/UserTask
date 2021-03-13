@@ -1,0 +1,24 @@
+{% include 'base.html' %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="container">
+      <h1>Add Product</h1>
+  
+      <label for="product_name"><b>Product Name</b></label>
+      <input type="text" placeholder="Enter Product Name" name="product_name" id="product_name" required><br>
+  
+      <label for="product_price"><b>Product Price</b></label>
+      <input type="text" placeholder="Enter Product Price" name="product_price" id="product_price" required><br>
+  
+      <label for="product_type"><b>Product Type</b></label>
+      <input type="text" placeholder="Product Type" name="product_type" id="product_type" required><br>
+
+      <label for="product_location"><b>Product Location</b></label>
+      <input type="text" placeholder="Product Location" name="product_location" id="product_location" required><br>
+
+    <input type="submit">
+    </div>
+  
+  </form>
+  {% endblock %}

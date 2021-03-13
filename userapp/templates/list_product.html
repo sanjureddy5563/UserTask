@@ -1,0 +1,8 @@
+{% include 'base.html' %}
+{% block content %}
+{% for pro in prod_list %}
+    {{pro.product_name}} - {{pro.product_price}} - {{pro.product_type}} - {{pro.product_location}}<br>
+{% endfor %}
+<br>
+<a href="{% url 'add_product' %}">Add Product</a>
+{% endblock %}
